@@ -1,0 +1,21 @@
+<h1>Index Page<h1>
+
+Our members site has <%= Post.count %> posts and counting!
+
+<ul>
+  <% @post.each do |post| %>
+    
+      <li>
+        <%#= link_to post.title, post %>
+      </li>
+      <li>
+        <%#= link_to post.body, post %>
+      </li>
+      <li>
+        <%#= link_to User.post.name, post %>
+      </li>     
+    
+  <% end %>
+</ul>
+
+<%= link_to "New post", new_post_path %>

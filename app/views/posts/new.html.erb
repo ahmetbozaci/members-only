@@ -1,0 +1,8 @@
+<h1>Post Here</h1>
+<%= simple_form_for(@post) do |f| %>
+  
+    <%= f.input :title, label: 'Title' %>
+    <%= f.input :body, label: 'Enter your post here' %> 
+    <%= hidden_field_tag (:user_id, current_user_id) %>
+    <%= f.button :submit %>
+<% end %>

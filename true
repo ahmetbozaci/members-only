@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20210224142819_add_colums_to_user.rb
