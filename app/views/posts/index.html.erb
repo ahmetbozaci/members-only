@@ -1,21 +1,27 @@
-<h1>Index Page <h1><h2>Welcome <%= current_user.name %></h2>
+<h1>Index Page <h1>
+
+<% if user_signed_in? %>
+  <h2>Welcome <%= current_user.name %></h2>
+<% end %>
 
 Our members site has <%= Post.count %> posts and counting!
 
 <ul>
-  <% @post.each do |post| %>
-    
+  <% @posts.each do |post| %>
       <li>
-        <%#= link_to post.title, post %>
+        <%= post.title %>
+          <ul>
+            <li>
+              <%= post.body %>
+            </li>
+          </ul>
       </li>
-      <li>
-        <%#= link_to post.body, post %>
-      </li>
-      <%# if user_signed_in? %>
-      <li>
-        <%#= link_to User.post.name, post %>
-      </li>    
-      <%# end %> 
+      
+      <% if user_signed_in? %>
+       <p> Author name:
+          <%= post.user.name %>
+       </p>
+      <% end %> 
     
   <% end %>
 </ul>

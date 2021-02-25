@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
-
   before_action :authenticate_user!, only: %i[new create]
 
   def index
-    @post = Post.all
+    @posts = Post.all
+    @post = Post.new
   end
 
   def new
     @post = current_user.posts.build
   end
-  
+
   def create
     @post = current_user.posts.build(post_params)
 
@@ -23,6 +23,7 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :body, :user_id)
   end
