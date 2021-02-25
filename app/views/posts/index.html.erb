@@ -1,4 +1,4 @@
-<h1>Index Page<h1>
+<h1>Index Page <h1><h2>Welcome <%= current_user.name %></h2>
 
 Our members site has <%= Post.count %> posts and counting!
 
@@ -11,9 +11,11 @@ Our members site has <%= Post.count %> posts and counting!
       <li>
         <%#= link_to post.body, post %>
       </li>
+      <%# if user_signed_in? %>
       <li>
         <%#= link_to User.post.name, post %>
-      </li>     
+      </li>    
+      <%# end %> 
     
   <% end %>
 </ul>
