@@ -1,0 +1,5 @@
+<%= simple_form_for(@post) do |f| %>
+    <%= f.input :title, label: 'Title', placeholder: 'Enter the title of your Post' %>
+    <%= f.input :body, label: 'Enter your post here: ', placeholder: 'Write something nice ...' %> 
+    <%= f.button :submit %>
+<% end %>

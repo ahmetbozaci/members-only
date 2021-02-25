@@ -1,0 +1,27 @@
+<% if user_signed_in? %>
+  <h2>Welcome <%= current_user.name %></h2>
+<% else %>
+<h2> Welcome User </h2>
+<% end %>
+
+Our members site has <%= Post.count %> posts and counting!
+
+<ul>
+  <% @posts.each do |post| %>
+      <li>
+        <%= post.title %>
+          <ul>
+            <li>
+              <%= post.body %>
+            </li>
+          </ul>
+      </li>
+      
+      <% if user_signed_in? %>
+       <p> Author name:
+          <%= post.user.name %>
+       </p>
+      <% end %> 
+    
+  <% end %>
+</ul>
