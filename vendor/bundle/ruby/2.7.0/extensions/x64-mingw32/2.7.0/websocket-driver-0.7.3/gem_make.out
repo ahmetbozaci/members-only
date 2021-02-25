@@ -1,0 +1,16 @@
+current directory: C:/Users/Nadi/Documents/MicroverseProj/members-only/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20210224-5128-vy2on9.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/Nadi/Documents/MicroverseProj/members-only/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: C:/Users/Nadi/Documents/MicroverseProj/members-only/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR="
+generating websocket_mask-x64-mingw32.def
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: C:/Users/Nadi/Documents/MicroverseProj/members-only/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20210224-5128-13wlc3v
