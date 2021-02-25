@@ -30,7 +30,7 @@
     ``` cd members-only ```
    - run ```bundle install ``` to install dependencies
    - run ```rails db:migrate ``` to create schema
-   - use ``` rails c ``` to go to the console
+   - use ``` rails webpacker:install ``` to install webpacker
    - use ``` rails s ``` to run the rails server
 
 ## Authors
