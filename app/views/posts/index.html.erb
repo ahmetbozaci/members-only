@@ -2,6 +2,8 @@
 
 <% if user_signed_in? %>
   <h2>Welcome <%= current_user.name %></h2>
+<% else %>
+<h2> Welcome User </h2>
 <% end %>
 
 Our members site has <%= Post.count %> posts and counting!
@@ -26,4 +28,7 @@ Our members site has <%= Post.count %> posts and counting!
   <% end %>
 </ul>
 
-<%= link_to "New post", new_post_path %>
+<%= link_to "New post", new_post_path %>   
+<% if user_signed_in? %> 
+ | <%= link_to "Sign Out", destroy_user_session_path %> 
+<% end %> 
