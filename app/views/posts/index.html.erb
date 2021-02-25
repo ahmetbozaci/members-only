@@ -29,6 +29,4 @@ Our members site has <%= Post.count %> posts and counting!
 </ul>
 
 <%= link_to "New post", new_post_path %>   
-<% if user_signed_in? %> 
- | <%= link_to "Sign Out", destroy_user_session_path %> 
-<% end %> 
+
