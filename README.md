@@ -3,6 +3,8 @@
 ## In these projects, we  worked to implement authentication systems so users can only access areas of a site they are authorized to.
 
 ![screenshot](./images/screenshot.png)
+![screenshot](./images/screenshot_2.png)
+![screenshot](./images/screenshot_3.png)
 ## Built With
 
 - Ruby
