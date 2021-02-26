@@ -3,22 +3,21 @@ module PostsHelper
     if user_signed_in?
       test.name
     else
-      "User"
+      'User'
     end
   end
 
   def author(posts)
-    user_signed_in? ? posts.title : "Anonymous"
+    user_signed_in? ? posts.title : 'Anonymous'
   end
 
-  def show_author(user) 
+  def show_author(user)
     if user_signed_in?
       "<p> Author name:
-          #{ user.name }
+          #{user.name}
        </p>".html_safe
     else
-      "<p> Author name: Anonymous </p>".html_safe  
+      '<p> Author name: Anonymous </p>'.html_safe
     end
   end
 end
-
