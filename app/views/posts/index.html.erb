@@ -14,8 +14,10 @@ Our members site has <%= Post.count %> posts and counting!
               <%= post.body %>
             </li>
           </ul>
-      </li>     
-    <%= show_author(post).name%>
+      </li> 
+      <%if user_signed_in? %>    
+    <%= post.user.name%>
+    <% end %>
   <% end %>
 </ul>
 
