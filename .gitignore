@@ -41,4 +41,4 @@ yarn-debug.log*
 
 # Ignore Bundle
 vendor/bundle
-
+.vscode
