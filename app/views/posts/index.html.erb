@@ -1,9 +1,7 @@
 <h1>Index Page <h1>
-<%# if user_signed_in? %>
+
   <h2>Welcome <%= sign(current_user) %></h2>
-<%# else %>
-<!-- <h2> Welcome User </h2> -->
-<%# end %>
+
 
 Our members site has <%= Post.count %> posts and counting!
 
@@ -16,15 +14,8 @@ Our members site has <%= Post.count %> posts and counting!
               <%= post.body %>
             </li>
           </ul>
-      </li>
-
-    
-       <p> Author name:
-          <%#= post.user.name %>
-          <%#= post.sign(user)%>
-       </p>
-      
-
+      </li>     
+    <%= show_author(post).name%>
   <% end %>
 </ul>
 
