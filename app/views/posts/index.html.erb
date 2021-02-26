@@ -1,24 +1,6 @@
 <h1>Index Page <h1>
 
-  <h2>Welcome <%= sign(current_user) %></h2>
+  <%= render "post" %>
 
-
-Our members site has <%= Post.count %> posts and counting!
-
-<ul>
-  <% @posts.each do |post| %>
-      <li>
-        <%= post.title %>
-          <ul>
-            <li>
-              <%= post.body %>
-            </li>
-          </ul>
-      </li> 
-      <%if user_signed_in? %>    
-    <%= post.user.name%>
-    <% end %>
-  <% end %>
-</ul>
 
 <%= link_to "New post", new_post_path %>
