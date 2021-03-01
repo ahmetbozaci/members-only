@@ -1,0 +1,18 @@
+ <h2>Welcome <%= sign(current_user) %></h2>
+
+
+Our members site has <%= Post.count %> posts and counting!
+<ul>
+<% @posts.each do |post| %>
+      <li>
+        <%= post.title %>
+          <ul>
+            <li>
+              <%= post.body %>
+            </li>
+          </ul>
+      </li> 
+        
+    <%= show_author(post.user) %>
+  <% end %>
+  </ul>

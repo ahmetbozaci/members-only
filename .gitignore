@@ -39,4 +39,6 @@
 yarn-debug.log*
 .yarn-integrity
 
+# Ignore Bundle
 vendor/bundle
+.vscode
